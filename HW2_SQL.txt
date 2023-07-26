@@ -1,6 +1,3 @@
-SQL_DDL
-Первая часть.
-
 Таблица employees
 
 Создать таблицу employees
