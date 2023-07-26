@@ -4,7 +4,7 @@ employee_name varchar(50) not null
 );
 
 insert into employees(employee_name)
-values 	('Ernest Fuller'),
+values 		('Ernest Fuller'),
 		('Robert Jones'),
 		('Shane Curtis'),
 		('Deborah Stone'),
@@ -84,7 +84,7 @@ values 	('Ernest Fuller'),
 	);
 
 insert into salary(monthly_salary)
-values  (1000),
+values  	(1000),
 		(1100),
 		(1200),
 		(1300),
@@ -111,7 +111,7 @@ values  (1000),
 	);
 	
 insert into employee_salary(employee_id,salary_id)
-values  (3,7),
+values  	(3,7),
 		(1,4),
 		(5,9),
 		(40,13),
@@ -164,7 +164,7 @@ alter table roles
 alter column role_name type varchar (30);
 	
 insert into roles(role_name)
-values  ('Junior Python developer'),
+values  	('Junior Python developer'),
 		('Middle Python developer'),
 		('Senior Python developer'),
 		('Junior Java developer'),
@@ -199,7 +199,7 @@ values  ('Junior Python developer'),
  );
 	
 insert into roles_employee(employee_id,role_id)
-values  (7,2),
+values  	(7,2),
 		(20,4),
 		(36,9),
 		(5,13),
@@ -240,4 +240,5 @@ values  (7,2),
 		(32,8),
 		(33,9);
 		
-	select *
+select *
+from roles_employee
