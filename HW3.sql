@@ -1,4 +1,5 @@
 HW3
+	
 --1. Вывести всех работников чьи зарплаты есть в базе, вместе с зарплатами. 
 
  select employees.employee_name, salary.monthly_salary
