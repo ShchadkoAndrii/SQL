@@ -242,4 +242,26 @@ from roles_employee join employee_salary on roles_employee.employee_id  = employ
 		    join employees on roles_employee.employee_id = employees.id 
 		    join roles on roles_employee.role_id = roles.id
 	            join salary on employee_salary.salary_id = salary.id
- where 	monthly_salary between 1700 and 2300		        
+ where 	monthly_salary between 1700 and 2300;
+
+--31. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП меньше 2300.
+
+select employees.employee_name,roles.role_name,salary.monthly_salary
+from roles_employee join employee_salary on roles_employee.employee_id  = employee_salary.employee_id 
+			        join employees on roles_employee.employee_id = employees.id 
+			        join roles on roles_employee.role_id = roles.id
+			        join salary on employee_salary.salary_id = salary.id
+ where 	monthly_salary > 2300		        
+ order by salary.monthly_salary asc;
+ 
+-- 32. Вывести имена, должности и ЗП всех специалистов по возрастанию у специалистов у которых ЗП равна 1100, 1500, 2000.
+
+select employees.employee_name,roles.role_name,salary.monthly_salary
+from roles_employee join employee_salary on roles_employee.employee_id  = employee_salary.employee_id 
+			        join employees on roles_employee.employee_id = employees.id 
+			        join roles on roles_employee.role_id = roles.id
+			        join salary on employee_salary.salary_id = salary.id
+ where 	monthly_salary in (1100,1500,2000)	        
+ order by salary.monthly_salary asc;
+ 
+
